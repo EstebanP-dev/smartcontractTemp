@@ -1,0 +1,51 @@
+/*Images*/
+$background-container: "../../assets/images/welcome-background.jpeg";
+/*Colors*/
+$primary: #f3cb1b;
+/*Layouts*/
+$layout-firts: 1050px;
+$layout-second: 700px;
+$layout-third: 560px;
+/***********************/
+.welcome {
+  background-color: black;
+  height: 100vh;
+  .welcome-backgroud {
+    display: flex;
+    height: 100%;
+    background-image: url($background-container);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    .background-opacity {
+      background-color: black;
+      height: 100%;
+      width: 100%;
+      opacity: 0.6;
+      position: absolute;
+    }
+    .welcome-content {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      .welcome-title {
+        font-weight: bold;
+        color: $primary;
+        text-transform: uppercase;
+        font-size: 12ch;
+        line-height: 3em;
+      }
+      .welcome-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 10em;
+      }
+    }
+  }
+}
+/***********************/
