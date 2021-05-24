@@ -1,0 +1,164 @@
+@import "../../varibles.scss";
+
+/***************************/
+
+.packs{
+    padding: $section-padding;
+    .title{
+        font-size: 7vw;
+        text-align: center;
+    }
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        transition: 0.5s;
+        width: 100%;
+        .card{
+            margin-top: 10vw;
+            background-color: $red;
+            border-radius: 15px;
+            display: inline-block;
+            height: 600px;
+            padding: 1vw;
+            width: 400px;
+            .content{
+                display: flex;
+                color: white;
+                flex-direction: column;
+                height: 100%;
+                justify-content: space-around;
+                text-align: center;
+                width: 100%;
+                h6{
+                    font-size: 2.5vw;
+                }
+                p{
+                    font-size: 1.5vw;
+                }
+                h4{
+                    font-size: 3.5vw;
+                }
+                .orden-now{
+                    box-shadow: black 5px 5px 15px 3px;
+                    border-radius: 0.8vw;
+                    color: $red;
+                    font-size: 1.2vw;
+                    font-weight: bold;
+                    padding: 1vw 2vw;
+                    transition: 0.5s;
+                }
+                .orden-now:hover{
+                    transform: translateY(-15px);
+                }
+            }
+        }
+        .card:hover{
+            transform: scale(1.1);
+        }
+    }
+
+}
+/***************************************/
+@media (max-width: 1270px){
+    .packs{
+        .cards{
+            .card{
+                width: 400px;
+                height: 600px;
+                padding: 5vw;
+                .content{
+                    h6{
+                        font-size: 4vw;
+                    }
+                    p{
+                        font-size: 3vw;
+                    }
+                    h4{
+                        font-size: 6vw;
+                    }
+                    .orden-now{
+                        font-size: 2vw;
+                        padding: 1vw 2vw;
+                    }
+                }
+            }
+        }
+    
+    }
+}
+@media (max-width: 1070px){
+    .packs{
+        .cards{
+            .card{
+                .content{
+                    h6{
+                        font-size: 5vw;
+                    }
+                    p{
+                        font-size: 4vw;
+                    }
+                    h4{
+                        font-size: 7vw;
+                    }
+                    .orden-now{
+                        font-size: 2.5vw;
+                        padding: 1vw 2vw;
+                    }
+                }
+            }
+        }
+    
+    }
+}
+@media (max-width: 1070px){
+    .packs{
+        .cards{
+            .card{
+                .content{
+                    h6{
+                        font-size: 7vw;
+                    }
+                    p{
+                        font-size: 5vw;
+                    }
+                    h4{
+                        font-size: 9vw;
+                    }
+                    .orden-now{
+                        font-size: 3vw;
+                        padding: 2vw 2vw;
+                    }
+                }
+            }
+        }
+    
+    }
+}
+@media (max-width: 570px){
+    .packs{
+        .cards{
+            .card{
+                width: 80%;
+                height: 100vw;
+                border-radius: 2vw;
+                .content{
+                    h6{
+                        font-size: 8vw;
+                    }
+                    p{
+                        font-size: 6vw;
+                    }
+                    h4{
+                        font-size: 10vw;
+                    }
+                    .orden-now{
+                        font-size: 3.5vw;
+                        padding: 2vw 2vw;
+                    }
+                }
+            }
+        }
+    
+    }
+}

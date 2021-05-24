@@ -1,0 +1,27 @@
+<section class="ownexperts">
+    <h1 class="title">- NUESTROS <span>EXPERTOS</span> -</h1>
+    <div class="ownexperts-cards">
+        <div class="card" *ngFor="let item of experts">
+            <div class="container">
+                <div class="face" style="background-image: url({{item.image}});"></div>
+                <div class="content">
+                    <p>
+                        <span class="name">{{item.name}}</span><br>
+                        <span class="job">{{item.jobTitle}}</span>
+                    </p>
+                    <div class="social">
+                        <div class="facebook">
+                            <img src="../../assets/images/facebook.svg" alt="Facebook - Icon">
+                        </div>
+                        <div class="linkedIn">
+                            <img src="../../assets/images/linkedIn.svg" alt="LinkedIn - Icon">
+                        </div>
+                        <div class="google-plus">
+                            <img src="../../assets/images/google-plus.svg" alt="Google Plus - Icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

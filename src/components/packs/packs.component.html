@@ -1,0 +1,13 @@
+<section class="packs">
+    <h1 class="title">- <span>PAQUETES</span> ASEQUIBLES -</h1>
+    <div class="cards" >
+        <div class="card" *ngFor="let pack of packs">
+            <div class="content">
+                <h6 class="claim-text">OBTENER {{pack.claim}} BTC</h6>
+                <p>PARA</p>
+                <h4 class="price-text">${{pack.price}}</h4>
+                <button class="orden-now">ORDENAR AHORA</button>
+            </div>
+        </div>
+    </div>
+</section>

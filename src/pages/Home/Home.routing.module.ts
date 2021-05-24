@@ -3,7 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomePage } from './Home.page';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path:'',
+    component:HomePage
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

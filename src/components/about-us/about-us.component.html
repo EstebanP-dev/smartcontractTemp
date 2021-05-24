@@ -1,0 +1,20 @@
+<section class="aboutUs">
+    <h1 class="title">- <span>Acerca de</span> nosotros -</h1>
+    <div class="aboutUs-content">
+        <div>
+            <div class="logo">
+                <img src="../../assets/images/logo.png" alt="logo.svg" class="logo-image" />
+            </div>
+            <ul class="words">
+                <li class="word {{(misionController) ? 'selected' : ''}}"><a (click)="OnPressedLabel(0)">Misión</a></li>
+                <li class="word {{(visionController) ? 'selected' : ''}}"><a (click)="OnPressedLabel(1)">Visión</a></li>
+                <li class="word {{(visionTwoController) ? 'selected' : ''}}"><a (click)="OnPressedLabel(2)">Visión</a></li>
+            </ul>
+        </div>
+        <div>
+            <p class="paragraph">
+                {{paragraph}}
+            </p>
+        </div>
+    </div>
+</section>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgZone, OnInit } from '@angular/core';
 
 @Component({
   selector: 'Navbar',
@@ -6,12 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  constructor() {}
+  constructor(private zone:NgZone) {}
 
   ngOnInit(): void {}
 
   SliderbarController = false;
 
-  ActiveSliderbarMenu = () =>
-    (this.SliderbarController = !this.SliderbarController);
+  ActiveSliderbarMenu(){
+    this.SliderbarController = !this.SliderbarController;
+    console.log("Buenos dias! ", this.SliderbarController);
+  }
+    
 }

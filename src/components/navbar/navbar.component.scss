@@ -1,19 +1,20 @@
-$primary: #f3cb1b;
-$white: #f5f5f5;
-$layout-firts: 1050px;
-$layout-second: 700px;
-$layout-third: 560px;
+@import "../../varibles.scss";
 
+/***************************/
 .navigation {
   z-index: 9999999;
+  position: fixed !important;
+  width: 100%;
+  overflow: hidden;
   .navbar {
-    position: relative;
     overflow: hidden;
     .navbar-list {
       padding: 0 10px;
       display: flex;
       background-color: black;
       justify-content: flex-end;
+      height: 3.5rem;
+      align-items: center;
       .list {
         .item {
           a {
@@ -23,79 +24,87 @@ $layout-third: 560px;
       }
       .navbar-menu {
         display: none;
+        width: 10vw;
+        img{
+          width: 100%;
+        }
       }
     }
     .logo {
-      z-index: 999;
-      position: absolute;
-      top: 50%;
-      left: 5%;
-      height: 10em;
-      width: 10em;
+      z-index: 99999999;
+      position: fixed;
+      top: 1%;
+      left: 5.5%;
+      width: 5vw;
+      img{
+        width: 100%;
+      }
     }
   }
   .slidebar {
-    z-index: 9999;
-    position: absolute;
-    right: 0;
-    width: 40%;
-    height: 100%;
     background-color: black;
-    overflow: hidden;
-    display: none;
+    position: fixed !important;
     flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    transition: 0.9s;
+    width: 50%;
+    z-index: 9999;
     .slidebar-title {
       color: $white;
-      text-align: center;
       line-height: 2.5em;
+      text-align: center;
+      font-size: 10vw;
     }
     .slidebar-list {
+      line-height: 12vw;
       text-align: center;
-      line-height: 4em;
       .item {
-        font-size: 20px;
+        font-size: 4.5vw;
         a {
           color: $primary;
-          text-decoration: none;
           font-weight: bold;
+          text-decoration: none;
           text-transform: uppercase;
         }
       }
-      @media (hover: hover) {
-        .item:hover {
-          background-color: $primary;
-          a {
-            color: $white;
-          }
+      .item:hover {
+        background-color: $primary;
+        a {
+          color: $white;
         }
       }
     }
   }
+  .Active{
+    right: 0 !important;
+  }
+  .Unactive{
+    right: -100% !important;
+  }
 }
 
-@media (max-width: $layout-firts) {
+@media (max-width: 1050px) {
   .navigation {
     .navbar {
       .logo {
-        left: 2%;
-        height: 7em;
-        width: 7em;
+        height: 8em;
+        width: 4em;
       }
     }
   }
 }
-@media (max-width: $layout-second) {
+@media (max-width: 700px) {
   .navigation {
     .navbar {
       .logo {
-        left: 1.5%;
-        height: 5em;
-        width: 5em;
+        height: 6em;
+        width: 3em;
       }
     }
   }
 }
-@media (max-width: $layout-third) {
+@media (max-width: $layout-slidebar) {
   .navigation {
     .navbar {
       .navbar-list {
@@ -110,10 +119,20 @@ $layout-third: 560px;
         }
       }
     }
+    .slidebar{
+      width: 100%;
+      .slidebar-title{
+        font-size: 5ch;
+      }
+      .slidebar-list{
+        .item{
+          font-size: 2ch;
+          line-height: 5em;
+        }
+      }
+    }
     .slidebar {
       display: flex;
-      right: -100%;
-      transition: 2s;
     }
     .slidebar-active {
       right: 0;

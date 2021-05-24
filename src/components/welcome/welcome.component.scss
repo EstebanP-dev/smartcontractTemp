@@ -1,19 +1,13 @@
 /*Images*/
-$background-container: "../../assets/images/welcome-background.jpeg";
-/*Colors*/
-$primary: #f3cb1b;
-/*Layouts*/
-$layout-firts: 1050px;
-$layout-second: 700px;
-$layout-third: 560px;
+@import '../../varibles.scss';
 /***********************/
 .welcome {
-  background-color: black;
+  position: relative;
   height: 100vh;
   .welcome-backgroud {
     display: flex;
     height: 100%;
-    background-image: url($background-container);
+    background-image: url("../../assets/images/welcome-background.png");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -33,19 +27,123 @@ $layout-third: 560px;
       flex-direction: column;
       justify-items: center;
       .welcome-title {
+        text-align: center;
         font-weight: bold;
         color: $primary;
         text-transform: uppercase;
-        font-size: 12ch;
-        line-height: 3em;
+        font-size: 7vw;
       }
       .welcome-buttons {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 0 10em;
+        margin: 10vw 5vw;
       }
     }
   }
 }
 /***********************/
+@media (max-width: 1330px){
+  .welcome{
+    .welcome-backgroud{
+      .welcome-content{
+        .welcome-buttons{
+          .button{
+            padding: 1vw 5vw;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1330px){
+  .welcome{
+    .welcome-backgroud{
+      .welcome-content{
+        .welcome-buttons{
+          .button{
+            padding: 1vw 3vw;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 970px){
+  .welcome{
+    .welcome-backgroud{
+      .welcome-content{
+        .welcome-buttons{
+          margin: 10vw 0;
+          .button{
+            font-size: 2vw;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: $layout-slidebar){
+  .welcome{
+    .welcome-backgroud{
+      .welcome-content{
+        .welcome-title{
+          font-size: 7.5vw;
+        }
+        .welcome-buttons{
+          flex-direction: column;
+          
+          .button{
+            font-size: 3vw;
+            margin-top: 10vw;
+            padding: 3vw 1vw;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 440px){
+  .welcome{
+    .welcome-backgroud{
+      .welcome-content{
+        .welcome-title{
+          font-size: 40px;
+        }
+        .welcome-buttons{
+          margin: 5vw 5vw;
+          .button{
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 380px){
+  .welcome{
+    .welcome-backgroud{
+      .welcome-content{
+        .welcome-title{
+          font-size: 35px;
+        }
+        .welcome-buttons{
+          .button{
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 340px){
+  .welcome{
+    .welcome-backgroud{
+      .welcome-content{
+        .welcome-title{
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
