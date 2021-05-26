@@ -1,5 +1,5 @@
 /*Images*/
-@import '../../varibles.scss';
+@import "../../varibles.scss";
 /***********************/
 .welcome {
   position: relative;
@@ -43,25 +43,12 @@
   }
 }
 /***********************/
-@media (max-width: 1330px){
-  .welcome{
-    .welcome-backgroud{
-      .welcome-content{
-        .welcome-buttons{
-          .button{
-            padding: 1vw 5vw;
-          }
-        }
-      }
-    }
-  }
-}
-@media (max-width: 1330px){
-  .welcome{
-    .welcome-backgroud{
-      .welcome-content{
-        .welcome-buttons{
-          .button{
+@media (max-width: 1330px) {
+  .welcome {
+    .welcome-backgroud {
+      .welcome-content {
+        .welcome-buttons {
+          .button {
             padding: 1vw 3vw;
           }
         }
@@ -69,13 +56,13 @@
     }
   }
 }
-@media (max-width: 970px){
-  .welcome{
-    .welcome-backgroud{
-      .welcome-content{
-        .welcome-buttons{
+@media (max-width: 970px) {
+  .welcome {
+    .welcome-backgroud {
+      .welcome-content {
+        .welcome-buttons {
           margin: 10vw 0;
-          .button{
+          .button {
             font-size: 2vw;
           }
         }
@@ -83,36 +70,37 @@
     }
   }
 }
-@media (max-width: $layout-slidebar){
-  .welcome{
-    .welcome-backgroud{
-      .welcome-content{
-        .welcome-title{
+@media (max-width: $layout-slidebar) {
+  .welcome {
+    .welcome-backgroud {
+      .welcome-content {
+        .welcome-title {
           font-size: 7.5vw;
         }
-        .welcome-buttons{
+        .welcome-buttons {
           flex-direction: column;
-          
-          .button{
+
+          .button {
             font-size: 3vw;
             margin-top: 10vw;
             padding: 3vw 1vw;
+            border-radius: 5vw;
           }
         }
       }
     }
   }
 }
-@media (max-width: 440px){
-  .welcome{
-    .welcome-backgroud{
-      .welcome-content{
-        .welcome-title{
+@media (max-width: 440px) {
+  .welcome {
+    .welcome-backgroud {
+      .welcome-content {
+        .welcome-title {
           font-size: 40px;
         }
-        .welcome-buttons{
+        .welcome-buttons {
           margin: 5vw 5vw;
-          .button{
+          .button {
             font-size: 15px;
           }
         }
@@ -120,15 +108,16 @@
     }
   }
 }
-@media (max-width: 380px){
-  .welcome{
-    .welcome-backgroud{
-      .welcome-content{
-        .welcome-title{
+@media (max-width: 380px) {
+  .welcome {
+    .welcome-backgroud {
+      .welcome-content {
+        .welcome-title {
           font-size: 35px;
         }
-        .welcome-buttons{
-          .button{
+        .welcome-buttons {
+          .button {
+            border-radius: 6vw;
             font-size: 15px;
           }
         }
@@ -136,12 +125,17 @@
     }
   }
 }
-@media (max-width: 340px){
-  .welcome{
-    .welcome-backgroud{
-      .welcome-content{
-        .welcome-title{
+@media (max-width: 340px) {
+  .welcome {
+    .welcome-backgroud {
+      .welcome-content {
+        .welcome-title {
           font-size: 30px;
+        }
+        .welcome-buttons {
+          .button {
+            border-radius: 7vw;
+          }
         }
       }
     }

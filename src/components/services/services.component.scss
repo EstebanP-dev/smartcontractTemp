@@ -2,45 +2,112 @@
 
 /******************************/
 
-.services{
-    padding: $section-padding;
-    .title{
-        text-align: start;
-    }
-    .services-carousel{
-        width: 100%;
-        margin-top: 10vw;
-        .card{
-            background-color: $primary;
-            border-radius: 20px;
-            box-shadow: $primary 0 0 20px 5px;
-            margin: 0 auto;
-            padding: 1vw;
-            width: 400px;
-            .header{
-                display: flex;
-                flex-direction: column;
-                .card-icon{
-                    width: 60%;
-                    margin: 0 auto;
-                    img{
-                        width: 100%;
-                    }
-                }
-                h6{
-                    margin-top: 1vw;
-                    text-align: center;
-                    font-size: 1.2vw;
-                    font-weight: bold;
-                }
-            }
-            .content{
-                padding: $section-padding $section-padding/2;
-                p{
-                    font-size: 1vw;
-                    text-align: center;
-                }
-            }
+.services {
+  overflow: hidden !important;
+  padding: $section-padding;
+  .title {
+    text-align: start;
+  }
+  .services-carousel {
+    width: 100%;
+    margin-top: 10vw;
+    .card {
+      background-color: $primary;
+      border-radius: 2vw;
+      box-shadow: $primary 0 0 20px 5px;
+      margin: 0 auto;
+      padding: 2vw;
+      transition: 0.5s;
+      width: 33%;
+      .header {
+        display: flex;
+        flex-direction: column;
+        .card-icon {
+          width: 60%;
+          margin: 0 auto;
+          img {
+            width: 100%;
+          }
         }
+        h6 {
+          margin-top: 1vw;
+          text-align: center;
+          font-size: 2vw;
+          font-weight: bold;
+        }
+      }
+      .content {
+        padding: $section-padding $section-padding/2;
+        p {
+          font-size: 1.5vw;
+          text-align: center;
+        }
+      }
     }
+    .card:hover {
+      transform: translateY(-15px);
+    }
+  }
+}
+/*********************/
+@media (max-width: 560px) {
+  .services {
+    .services-carousel {
+      .card {
+        width: 40%;
+        padding: 3vw;
+        .header {
+          .card-icon {
+            width: 80%;
+          }
+          h6 {
+            font-size: 3vw;
+          }
+        }
+        .content {
+          p {
+            font-size: 2.5vw;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 380px) {
+  .services {
+    .services-carousel {
+      .card {
+        width: 60%;
+        .header {
+          h6 {
+            font-size: 4vw;
+          }
+        }
+        .content {
+          p {
+            font-size: 3.5vw;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 280px) {
+  .services {
+    .services-carousel {
+      .card {
+        width: 80%;
+        .header {
+          h6 {
+            font-size: 5vw;
+          }
+        }
+        .content {
+          p {
+            font-size: 4.5vw;
+          }
+        }
+      }
+    }
+  }
 }

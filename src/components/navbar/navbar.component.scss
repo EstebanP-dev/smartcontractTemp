@@ -2,10 +2,11 @@
 
 /***************************/
 .navigation {
-  z-index: 9999999;
-  position: fixed !important;
-  width: 100%;
   overflow: hidden;
+  position: fixed !important;
+  top: 0 !important;
+  width: 100%;
+  z-index: 9999999;
   .navbar {
     overflow: hidden;
     .navbar-list {
@@ -25,7 +26,7 @@
       .navbar-menu {
         display: none;
         width: 10vw;
-        img{
+        img {
           width: 100%;
         }
       }
@@ -36,7 +37,7 @@
       top: 1%;
       left: 5.5%;
       width: 5vw;
-      img{
+      img {
         width: 100%;
       }
     }
@@ -76,10 +77,10 @@
       }
     }
   }
-  .Active{
+  .Active {
     right: 0 !important;
   }
-  .Unactive{
+  .Unactive {
     right: -100% !important;
   }
 }
@@ -119,13 +120,13 @@
         }
       }
     }
-    .slidebar{
+    .slidebar {
       width: 100%;
-      .slidebar-title{
+      .slidebar-title {
         font-size: 5ch;
       }
-      .slidebar-list{
-        .item{
+      .slidebar-list {
+        .item {
           font-size: 2ch;
           line-height: 5em;
         }
