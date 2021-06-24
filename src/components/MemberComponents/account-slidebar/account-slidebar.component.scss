@@ -1,0 +1,722 @@
+@import "../../../varibles.scss";
+
+/***************************/
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.aside-button {
+  position: relative;
+  top: 0;
+  right: 0;
+  background-color: $black-navbar;
+  z-index: 99999999999999999;
+  padding: 0.5rem 1rem;
+  transition: 1s;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  fa-icon {
+    color: $primary;
+    font-size: 2vw;
+  }
+  .navbar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 2rem;
+    padding-left: 2rem;
+    border-left: $border-light solid 1px;
+    position: relative;
+    .logo {
+      width: 2vw;
+      img {
+        width: 100%;
+      }
+    }
+    .crypto {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 10%;
+      .image {
+        width: 3vw;
+        img {
+          width: 100%;
+        }
+      }
+      .name {
+        font-size: 1.5vw;
+        text-transform: uppercase;
+        color: $white;
+      }
+    }
+    .navigation {
+      .list {
+        .item {
+          padding-right: 0.5vw;
+          a {
+            color: $white;
+          }
+        }
+      }
+    }
+    .menu {
+      display: none;
+    }
+  }
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin-top: 2%;
+}
+
+.slidebar {
+  background-color: $black-navbar;
+  height: 100%;
+  width: 15%;
+  position: relative;
+  padding: 2rem 1rem;
+  transition: 1s;
+  .slidebar-title {
+    width: 100%;
+    padding: 1.2vw 0;
+    border-bottom: $border-light solid 1px;
+    text-align: center;
+    margin-bottom: 2vw;
+    h2 {
+      color: $white;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 1.2vw;
+    }
+  }
+  .profile {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2vw;
+    fa-icon {
+      color: $primary;
+      font-size: 5vw;
+    }
+    p {
+      color: $text-light;
+      font-size: 0.8vw;
+      text-transform: uppercase;
+      span {
+        color: $primary;
+        font-size: 1vw;
+        span {
+          color: $red;
+        }
+      }
+    }
+  }
+  .screen {
+    width: 100%;
+    margin-bottom: 2vw;
+    .screen-title {
+      color: $text-light;
+      font-size: 0.8vw;
+      text-transform: uppercase;
+      font-weight: normal;
+    }
+    .screen-content {
+      background-color: $screen-background-1;
+      padding: 0.75rem 1rem;
+      margin: 0.7rem;
+      border-radius: 5px;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      overflow: hidden;
+      word-break: keep-all;
+      h4 {
+        color: $white;
+        letter-spacing: 1.2px;
+        font-size: 1vw;
+        font-weight: normal;
+      }
+      fa-icon {
+        color: $white;
+        cursor: pointer;
+      }
+    }
+    .screen-content:before {
+      content: "";
+      box-sizing: border-box;
+      background-color: $dark-primary;
+      position: absolute;
+      left: -5px;
+      top: calc(50% - 9px);
+      display: block;
+      width: 10px;
+      height: 20px;
+    }
+    .screen-content:nth-child(2) {
+      background-color: $screen-background-1;
+      font-weight: bold;
+    }
+    .screen-content:nth-child(4) {
+      background-color: $screen-background-2;
+      padding: 0.3rem 1rem;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      overflow: hidden;
+      span {
+        color: rgb(184, 184, 184);
+        font-size: 0.5vw;
+        text-transform: uppercase;
+        font-weight: normal;
+        margin-bottom: 2px;
+      }
+    }
+    .screen-select {
+      transition: 1s;
+      padding: 0.75rem 1rem;
+      .list {
+        border-radius: 5px;
+        background-color: $screen-background-3;
+        .list__item {
+          padding: 1rem;
+          font-size: 0.7vw;
+          border-radius: 5px;
+          cursor: pointer;
+          text-decoration: none;
+          color: $white;
+        }
+        .list__item:hover {
+          background-color: $screen-background-3;
+        }
+      }
+    }
+    .screen-options {
+      text-align: end;
+      .copy {
+        color: $primary;
+        cursor: pointer;
+      }
+      .copy:hover {
+        color: gray;
+      }
+      .scan {
+        a {
+          color: $white;
+          cursor: pointer;
+          padding-right: 8px;
+          text-decoration: none;
+        }
+        a:hover {
+          color: $red;
+        }
+      }
+    }
+  }
+  .box {
+    border-top: $border-light solid 1px;
+    border-bottom: $border-light solid 1px;
+    padding: 1rem;
+    margin-bottom: 2vw;
+    .box-container {
+      background-color: #202033;
+      border-radius: 15px;
+      padding: 1rem;
+      text-align: center;
+      position: relative;
+      .box-icon {
+        fa-icon {
+          font-size: 4vw;
+          color: $primary;
+        }
+      }
+      .box-content {
+        .text {
+          padding: 1.5rem 0;
+          .value {
+            color: $white;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 1vw;
+          }
+          .content-title {
+            color: $text-light;
+            font-weight: normal;
+            font-size: 0.7vw;
+          }
+        }
+        .divider {
+          margin: 0 auto;
+          width: 20%;
+          height: 2px;
+          background-color: $light-primary;
+        }
+      }
+    }
+    .box-container::before {
+      content: "";
+      position: absolute;
+      width: 6rem;
+      height: 15px;
+      top: -1px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      background-color: $dark-primary;
+    }
+  }
+  .Active {
+    display: block;
+    transform: scale(1);
+    transition: 10s;
+  }
+  .Unactive {
+    transition: 10s;
+    transform: scale(0);
+    display: none;
+  }
+}
+
+.On {
+  left: 0;
+}
+.Off {
+  left: -17%;
+}
+.Configure {
+  fa-icon {
+    color: $red;
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .slidebar {
+    width: 20%;
+    .slidebar-title {
+      h2 {
+        font-size: 2vw;
+      }
+    }
+    .profile {
+      fa-icon {
+        font-size: 7vw;
+      }
+      p {
+        font-size: 1.2vw;
+        span {
+          font-size: 1.5vw;
+        }
+      }
+    }
+    .screen {
+      .screen-title {
+        font-size: 1.2vw;
+      }
+      .screen-content {
+        h4 {
+          font-size: 1.6vw;
+        }
+      }
+      .screen-content:nth-child(4) {
+        span {
+          font-size: 1vw;
+        }
+      }
+      .screen-select {
+        .list {
+          .list__item {
+            font-size: 1.5vw;
+          }
+        }
+      }
+    }
+    .box {
+      .box-container {
+        .box-icon {
+          fa-icon {
+            font-size: 6vw;
+          }
+        }
+        .box-content {
+          .text {
+            .value {
+              font-size: 1.6vw;
+            }
+            .content-title {
+              font-size: 1.4vw;
+            }
+          }
+        }
+      }
+    }
+  }
+  .Off {
+    left: -23%;
+  }
+}
+
+@media (max-width: 1180px) {
+  .aside-button {
+    fa-icon {
+      font-size: 3vw;
+    }
+    .navbar {
+      .logo {
+        width: 3vw;
+        img {
+          width: 100%;
+        }
+      }
+      .crypto {
+        .image {
+          width: 4vw;
+          img {
+            width: 100%;
+          }
+        }
+        .name {
+          font-size: 2vw;
+          text-transform: uppercase;
+          color: $white;
+        }
+      }
+      .navigation {
+        .list {
+          .item {
+            padding-right: 0.5vw;
+            a {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .aside-button {
+    fa-icon {
+      font-size: 3vw;
+    }
+  }
+  .slidebar {
+    width: 25%;
+  }
+  .Off {
+    left: -33%;
+  }
+}
+@media screen and (max-width: 880px) {
+  .aside-button {
+    fa-icon {
+      font-size: 3vw;
+    }
+    .navbar {
+      .crypto {
+        width: 13%;
+      }
+    }
+    .navigation {
+      display: none;
+    }
+    .menu {
+      display: inline-block;
+      fa-icon {
+        font-size: 3vw;
+      }
+    }
+  }
+  .slidebar {
+    width: 30%;
+    .slidebar-title {
+      h2 {
+        font-size: 2.5vw;
+      }
+    }
+    .profile {
+      fa-icon {
+        font-size: 9vw;
+      }
+      p {
+        font-size: 1.8vw;
+        span {
+          font-size: 2vw;
+        }
+      }
+    }
+    .screen {
+      .screen-title {
+        font-size: 1.8vw;
+      }
+      .screen-content {
+        h4 {
+          font-size: 2vw;
+        }
+      }
+      .screen-content:nth-child(4) {
+        span {
+          font-size: 1.2vw;
+        }
+      }
+      .screen-select {
+        .list {
+          .list__item {
+            font-size: 2vw;
+          }
+        }
+      }
+    }
+    .box {
+      .box-container {
+        .box-icon {
+          fa-icon {
+            font-size: 8vw;
+          }
+        }
+        .box-content {
+          .text {
+            .value {
+              font-size: 2vw;
+            }
+            .content-title {
+              font-size: 1.8vw;
+            }
+          }
+        }
+      }
+    }
+  }
+  .Off {
+    left: -35%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .aside-button {
+    fa-icon {
+      font-size: 4vw;
+    }
+    .navbar {
+      .crypto {
+        .image {
+          width: 4vw;
+          img {
+            width: 100%;
+          }
+        }
+        .name {
+          font-size: 2.5vw;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 770px) {
+  .aside-button {
+    fa-icon {
+      font-size: 5vw;
+    }
+    .navbar {
+      .logo {
+        width: 4vw;
+      }
+      .crypto {
+        width: 16%;
+        .image {
+          width: 5vw;
+        }
+      }
+    }
+    .navigation {
+      display: none;
+    }
+    .menu {
+      display: inline-block;
+      fa-icon {
+        font-size: 5vw;
+      }
+    }
+  }
+}
+@media (max-width: 670px) {
+  .slidebar {
+    width: 40%;
+    .slidebar-title {
+      padding: 2vw 0;
+      margin-bottom: 3vw;
+      h2 {
+        font-size: 3.5vw;
+      }
+    }
+    .profile {
+      fa-icon {
+        font-size: 13vw;
+      }
+      p {
+        font-size: 2.5vw;
+        span {
+          font-size: 3vw;
+        }
+      }
+    }
+    .screen {
+      margin-bottom: 3vw;
+      .screen-title {
+        font-size: 2.5vw;
+      }
+      .screen-content {
+        h4 {
+          font-size: 3vw;
+        }
+      }
+      .screen-content:nth-child(4) {
+        span {
+          font-size: 2vw;
+        }
+      }
+      .screen-select {
+        .list {
+          .list__item {
+            font-size: 1.5vw;
+          }
+        }
+      }
+    }
+    .box {
+      .box-container {
+        .box-icon {
+          fa-icon {
+            font-size: 8vw;
+          }
+        }
+        .box-content {
+          .text {
+            .value {
+              font-size: 2vw;
+            }
+            .content-title {
+              font-size: 1.8vw;
+            }
+          }
+        }
+      }
+    }
+  }
+  .Off {
+    left: -50%;
+  }
+}
+@media (max-width: 500px) {
+  .aside-button {
+    fa-icon {
+      font-size: 2rem;
+    }
+    .navbar {
+      .logo {
+        width: 1.5rem;
+      }
+      .crypto {
+        width: 5rem;
+        .image {
+          width: 2rem;
+        }
+        .name {
+          font-size: 1rem;
+        }
+      }
+    }
+    .navigation {
+      display: none;
+    }
+    .menu {
+      display: inline-block;
+      fa-icon {
+        font-size: 2rem;
+      }
+    }
+  }
+  .slidebar {
+    width: 60%;
+    .slidebar-title {
+      padding: 1.8rem 0;
+      margin-bottom: 1.8rem;
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+    .profile {
+      fa-icon {
+        font-size: 8rem;
+      }
+      p {
+        font-size: 1rem;
+        span {
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .screen {
+      margin-bottom: 1.8rem;
+      .screen-title {
+        font-size: 0.8rem;
+      }
+      .screen-content {
+        h4 {
+          font-size: 1.2rem;
+        }
+      }
+      .screen-content:nth-child(4) {
+        span {
+          font-size: 0.8rem;
+        }
+      }
+      .screen-select {
+        .list {
+          .list__item {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+    .box {
+      padding: 1rem;
+      margin-bottom: 2rem;
+      .box-container {
+        .box-icon {
+          fa-icon {
+            font-size: 8rem;
+          }
+        }
+        .box-content {
+          .text {
+            .value {
+              font-size: 1.5rem;
+            }
+            .content-title {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .Off {
+    left: -70%;
+  }
+}
+@media (max-width: 430px) {
+  .slidebar {
+    width: 90%;
+  }
+  .Off {
+    left: -120%;
+  }
+}

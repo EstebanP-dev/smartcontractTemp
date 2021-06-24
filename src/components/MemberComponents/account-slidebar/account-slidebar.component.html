@@ -1,0 +1,168 @@
+<div class="header">
+  <div class="aside-button {{ isOnAside ? 'Configure' : '' }}">
+    <fa-icon
+      [icon]="isOnAside ? faTimes : faSlidersH"
+      (click)="ActiveAside()"
+    ></fa-icon>
+    <div class="navbar">
+      <div class="logo">
+        <img src="../../../assets/images/logo.png" alt="Logo" />
+      </div>
+      <div class="crypto">
+        <div class="image">
+          <img src="{{ crypto.icon }}" alt="{{ crypto.name }}-logo" />
+        </div>
+        <div class="name">
+          <span>{{ crypto.name }}</span>
+        </div>
+      </div>
+      <nav class="navigation">
+        <ul class="list">
+          <li class="item"><a href="#">Buenas</a></li>
+          <li class="item"><a href="#">Buenas</a></li>
+          <li class="item"><a href="#">Buenas</a></li>
+          <li class="item"><a href="#">Buenas</a></li>
+          <li class="item"><a href="#">Buenas</a></li>
+        </ul>
+      </nav>
+      <div class="menu">
+        <fa-icon [icon]="faBars"></fa-icon>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="body">
+  <aside class="slidebar {{ isOnAside ? 'On' : 'Off' }}">
+    <div class="slidebar-title">
+      <h2>Smart Contract</h2>
+    </div>
+    <div class="profile">
+      <fa-icon [icon]="faUserCircle"></fa-icon>
+      <p>
+        Member: <br />
+        <span
+          >ID <span>{{ number }}</span></span
+        >
+      </p>
+    </div>
+    <div class="screen">
+      <span class="screen-title">Income:</span>
+      <div class="screen-content">
+        <h4>{{ trx }} trx</h4>
+        <fa-icon
+          [icon]="screenSelectController ? faSortUp : faSortDown"
+          (click)="ActiveScreenSelect()"
+        ></fa-icon>
+      </div>
+      <div
+        class="screen-select {{
+          screenSelectController ? 'Active' : 'Unactive'
+        }}"
+      >
+        <div class="list">
+          <div class="list__item" (click)="ChangePrice(true)">USD</div>
+          <div class="list__item" (click)="ChangePrice(false)">EUR</div>
+        </div>
+      </div>
+      <div class="screen-content">
+        <span>Equivalent:</span>
+        <h4>{{ isDolar ? "$" : "€" }} {{ price }}</h4>
+      </div>
+    </div>
+    <div class="screen">
+      <span class="screen-title">Personal Downline:</span>
+      <div class="screen-content">
+        <h4>{{ personal }}</h4>
+      </div>
+    </div>
+    <div class="screen">
+      <span class="screen-title">Affiliate Link:</span>
+      <div class="screen-content scroll-x">
+        <h4>{{ affiliateLink }}</h4>
+      </div>
+      <div class="screen-options">
+        <span
+          class="copy"
+          cdkCopyToClipboard="{{ affiliateLink }}"
+          (click)="tinyAlert()"
+          ><fa-icon [icon]="faCopy"></fa-icon> copy
+        </span>
+      </div>
+    </div>
+    <div class="screen">
+      <span class="screen-title">Tron Wallet:</span>
+      <div class="screen-content scroll-x">
+        <h4>{{ trxWallet }}</h4>
+      </div>
+      <div class="screen-options">
+        <span class="scan"
+          ><a href="https://imgur.com/gallery/nOZLM0W">
+            <fa-icon [icon]="faCopy"></fa-icon> to tronscan
+          </a>
+        </span>
+        <span
+          class="copy"
+          cdkCopyToClipboard="{{ trxWallet }}"
+          (click)="tinyAlert()"
+          ><fa-icon [icon]="faCopy"></fa-icon> copy
+        </span>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-container">
+        <div class="box-icon">
+          <fa-icon [icon]="faChartLine"></fa-icon>
+        </div>
+        <div class="box-content" *ngFor="let item of boxContent">
+          <div class="text">
+            <div class="value">
+              <span>{{ item.value }}</span>
+            </div>
+            <div class="content-title">
+              <span>{{ item.title }}</span>
+            </div>
+          </div>
+          <div class="divider"></div>
+        </div>
+      </div>
+    </div>
+    <div class="screen">
+      <span class="screen-title">Matrix Contract Address:</span>
+      <div class="screen-content scroll-x">
+        <h4>{{ matrixContract }}</h4>
+      </div>
+      <div class="screen-options">
+        <span class="scan"
+          ><a href="https://imgur.com/gallery/nOZLM0W">
+            <fa-icon [icon]="faCopy"></fa-icon> to tronscan
+          </a>
+        </span>
+        <span
+          class="copy"
+          cdkCopyToClipboard="{{ matrixContract }}"
+          (click)="tinyAlert()"
+          ><fa-icon [icon]="faCopy"></fa-icon> copy
+        </span>
+      </div>
+    </div>
+    <div class="screen">
+      <span class="screen-title">Unilevel Contract Address:</span>
+      <div class="screen-content scroll-x">
+        <h4>{{ unilvlContract }}</h4>
+      </div>
+      <div class="screen-options">
+        <span class="scan"
+          ><a href="https://imgur.com/gallery/nOZLM0W">
+            <fa-icon [icon]="faCopy"></fa-icon> to tronscan
+          </a>
+        </span>
+        <span
+          class="copy"
+          cdkCopyToClipboard="{{ unilvlContract }}"
+          (click)="tinyAlert()"
+          ><fa-icon [icon]="faCopy"></fa-icon> copy
+        </span>
+      </div>
+    </div>
+  </aside>
+</section>

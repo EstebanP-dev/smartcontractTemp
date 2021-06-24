@@ -1,0 +1,22 @@
+<section class="body">
+  <div class="cards">
+    <div class="card" *ngFor="let item of cards">
+      <fa-icon [icon]="faChevronDown" class="chevron"></fa-icon>
+      <div class="card-icon">
+        <fa-icon [icon]="faBolt"></fa-icon>
+      </div>
+      <div class="card-content">
+        <div class="card-title">
+          <p>
+            Comp Plan: <span>BOLT {{ item.id }}</span>
+          </p>
+        </div>
+        <div class="divider"></div>
+        <div class="card-values">
+          <span class="wallet">${{ item.wallet }}</span>
+          <span class="trx">{{ item.trx }} trx</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

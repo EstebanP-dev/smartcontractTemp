@@ -5,14 +5,15 @@
   overflow: hidden;
   position: fixed !important;
   top: 0 !important;
-  width: 100%;
+  width: 85%;
+  right: 0;
   z-index: 9999999;
   .navbar {
     overflow: hidden;
     .navbar-list {
       padding: 0 10px;
       display: flex;
-      background-color: black;
+      background-color: $black-navbar;
       justify-content: flex-end;
       height: 3.5rem;
       align-items: center;
@@ -35,15 +36,15 @@
       z-index: 99999999;
       position: fixed;
       top: 1%;
-      left: 5.5%;
-      width: 5vw;
+      left: 18%;
+      width: 4vw;
       img {
         width: 100%;
       }
     }
   }
   .slidebar {
-    background-color: black;
+    background-color: $black-navbar;
     position: fixed !important;
     flex-direction: column;
     height: 100%;

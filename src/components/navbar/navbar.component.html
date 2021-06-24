@@ -9,20 +9,21 @@
       </ul>
       <div class="navbar-menu">
         <img
-          src="{{(SliderbarController)?'../../assets/images/close.svg':'../../assets/images/menu.svg'}}"
+          src="{{
+            SliderbarController
+              ? '../../assets/images/close.svg'
+              : '../../assets/images/menu.svg'
+          }}"
           alt="navbar-menu"
-          
           (click)="ActiveSliderbarMenu()"
         />
       </div>
     </div>
     <div class="logo">
-      <img src="../../assets/images/logo.png" alt="logo.svg"  />
+      <img src="../../assets/images/logo.png" alt="logo.svg" />
     </div>
   </nav>
-  <aside
-    class="slidebar {{(SliderbarController)?'Active':'Unactive'}}"
-  >
+  <aside class="slidebar {{ SliderbarController ? 'Active' : 'Unactive' }}">
     <h2 class="slidebar-title">Menú</h2>
     <ul class="slidebar-list">
       <li class="item"><a href="!#">Sobre nosotros</a></li>
