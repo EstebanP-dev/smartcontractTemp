@@ -6,6 +6,7 @@
   position: absolute;
   top: 0;
   width: 100%;
+  height: 100%;
 }
 
 .aside-button {
@@ -73,14 +74,12 @@
 
 .body {
   width: 100%;
-  height: 100%;
   position: absolute;
-  margin-top: 2%;
 }
 
 .slidebar {
+  z-index: 99;
   background-color: $black-navbar;
-  height: 100%;
   width: 15%;
   position: relative;
   padding: 2rem 1rem;
